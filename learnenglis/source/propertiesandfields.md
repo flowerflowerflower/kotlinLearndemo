@@ -73,9 +73,20 @@ var setterVisibility:String ="abc"
      private set // the setter is  private and has the default implementation
 var setterWithAnnotation:Any?=null
   @Inject set// annotate  the setter with Inject
-
-
 ```
+
+Backing Fields
+
+Fields can not be declared directly in  Kotlin classes ,However when  a property needs a  backing field.Kotlin provides it automatically.This backing field  can be referenced in the accessors using  the field identifier:
+```
+var counter = 0//Note :the initializer assigns the backing field directly
+      set(value){
+        if(value>=0) field=value
+      }
+```
+
+
+
 
 
 
