@@ -86,6 +86,29 @@ var counter = 0//Note :the initializer assigns the backing field directly
 ```
 
 
+Late-initialized Properties and Variables
+Normally,properties declared as having a non-null type must be initialized in  the constructor.However,fairly often this is not convenient.For Example ,properties can be initialized through dependency injection,or in the setup method of a unit test, In this case ,you cannnot supply a non-null initializer in the constructor,but you still want to avoid null checks when referencing the property inside the body of a class
+To handle this case,you can make the property with the lateinit modifier:
+
+
+......
+public class MyTest{
+
+  lateinit var subject:TestSubject
+
+
+   @SetUp fun setup(){
+   subject = TestSubject()
+   }
+
+   @Test fun test(){
+   subject.method()//dereference dire
+   }
+
+
+}
+.......
+
 
 
 
