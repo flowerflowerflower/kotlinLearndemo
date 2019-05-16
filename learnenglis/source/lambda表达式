@@ -1,0 +1,21 @@
+##什么是lambda 表达式
+匿名函数
+
+写法：{[参数列表]->[函数体，最后一返回值]}
+
+val sum={ a:Int,b:Int -> a+b}
+
+
+
+()->unit
+
+(int)->int
+
+(String,{String,String->String})->Boolean
+
+Lambda表达简化
+
+函数参数调用时 最后一个lambda 可以移出去
+函数参数只是一个Lambda，调用的小括号可省略
+Lambada 只有一一个参数可以默认为it
+入参，返回值与形参一致的函数可以用函数引用的方式作为参数传入  **
