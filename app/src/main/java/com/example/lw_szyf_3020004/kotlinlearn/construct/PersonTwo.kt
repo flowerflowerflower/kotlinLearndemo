@@ -8,4 +8,7 @@ class PersonTwo {
     constructor(name:String,parent: String):this(name){
 
     }
+
+
+
 }
