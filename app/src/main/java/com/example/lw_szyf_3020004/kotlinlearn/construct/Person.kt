@@ -1,10 +1,11 @@
 package com.example.lw_szyf_3020004.kotlinlearn.construct
 
-import java.sql.DriverManager.println
+
 
 class Person constructor(firstName:String) {
     var name="First property:$firstName";
 
+    lateinit var like:String
 
     init {
         println("Second initializer block that prints ${name.length}")
@@ -12,6 +13,12 @@ class Person constructor(firstName:String) {
 
     init {
         println("Second initializer block that prints ${name.length}")
+    }
+
+    fun namePrint(){
+
+        println("name initializer block that prints ${name.length}")
+
     }
 
 }

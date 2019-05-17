@@ -10,4 +10,5 @@ you need to declare an empty primary constructor with non-default visibility:
 
 class DontCreateMe private constructor(){
 
+
 }
