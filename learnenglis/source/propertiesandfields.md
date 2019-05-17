@@ -78,6 +78,60 @@ var setterWithAnnotation:Any?=null
 ```
 
 
+Backing Fields
+Fields cannot be declared directly in Kotlin classes.However.when a property needs a backing field.Kotlin provides it automatically. This backing field can be referenced in the accessors using the field identifier:
+...
+var counter = 0// Note: the initializer assigns the backing field directly
+    set(value){
+    if(value>=0)field=value
+    }
+...
+
+The field identifier can only be used in the accessors of the property;
+
+A backing field will be generated for a property if uses the default implementation of at least one of the accessors,or if a custom accessor references it through the field identifier
+
+
+For  example , int thre following case there will be no backing field:
+```
+val isEmpty:Boolean
+    get()=this.size==0
+```
+
+## backing Properties
+if you want to something that does not fit into this "implicit backing field" scheme,you can always fall back to having a backing property:
+```
+private var _table:Map<String,Int>? =null
+public val table:Map<String,Int>
+           get(){
+            if(_table == null){
+               _table = HashMap() // Type paramters are inferred
+            }
+            return _table ?: trow AssertionError("Set to null by another thread")
+            }
+```
+In all respects,this is just same as in java since access to private properties with default getters and setters is optimized so that no function call overhead is introduced
+
+Compile-Time Constants
+
+Properties the value of which  is known at compile time constants using the const modifier. such properties need to fulfil the following requirements
+
+
+--- Top-level,or member of an object declaration or a companion  object
+--- Initialized with a value of type String or primitive type
+--- No custom getter
+Such properties can be used in annotations:
+const val SUBSYSTEM_DEPRECATED: String = "This subsystem is deprecated"
+@Deprecated(SUBSYSTEM_DEPRECATED)fun foo(){...}
+
+## Late-Initialized Properties and Variables
+
+Normally,properties declared as having a non-null type must be initialized int the constructor.However,fairly often this is not  convenient,for
+
+
+
+
+
 
 
 

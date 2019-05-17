@@ -45,3 +45,39 @@ v.
  infer的过去分词和过去式
 
 
+>> fall back
+
+英 [fɔːl bæk]   美 [fɔːl bæk]
+略微退后;稍稍后退;（军队）撤退，后撤
+-------------------------------------------------------------------------
+
+
+>> Sealed
+sealed
+英 [siːld]   美 [siːld]
+v.
+封上(信封);密封(容器);封盖…的表面
+seal的过去分词和过去式
+
+>> hierarchies
+
+
+
+>>immutable
+
+英 [ɪˈmjuːtəbl]   美 [ɪˈmjuːtəbl]
+adj.
+不可改变的;永恒不变的
+派生词： immutability n.
+
+
+>>covariant
+英 [kəʊˈveəriənt]   美 [koʊˈveriənt]
+adj.
+共变的
+
+
+>>Variance Annotation
+  英 [ˈveəriəns ˌænəˈteɪʃn]   美 [ˈveriəns ˌænəˈteɪʃn]
+  型变注释
+
