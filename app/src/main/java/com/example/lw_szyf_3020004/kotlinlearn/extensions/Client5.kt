@@ -22,4 +22,19 @@ fun main() {
 
     val f:Factory<MyClass> =MyClasses.Companion
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
