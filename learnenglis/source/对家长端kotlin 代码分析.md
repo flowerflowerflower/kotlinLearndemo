@@ -49,6 +49,49 @@ private val _wechatId
 >具体化泛型传入的类型,知道该泛型类型所对应真正的类型.
 
 
+## data 类的好处
+> 相对java 如果你声明了data 类型 它的好处
+ * equals()/hashCode()
+ * toString()方法
+ * componentN()方法
+ * copy()方法
+ 上面的方法都已经被重写了
+
+ 
+## 如果声明一个简单的数据类型，有下面的几点要求
+  * 主构造函数必须要至少有一个参数
+  * 主构造函数中的所有参数必须被标记为val或者var
+  * 数据类不能有以下修饰符：abstract，inner,open,sealed
+  * data class只能实现接口（Kotlin1.1以前的规则），现在也可以继承其它类
+
+### 什么是  componentN()方法是干嘛用的
+在主构造函数中有多少个参数，就会依次生成对应的component1,component2,component3……这些函数返回的就是对应字段的值
+componentN函数是用来实现解构申明的
+
+```
+data class User(var id: Int,var name:String) 
+
+
+fun main(args: Array<String>) {
+    var user: User = User(123, "liuliqianxiao")
+    var (id,name) = user//多重赋值
+    print("$id,$name")
+}
+```
+
+再来看看copy函数，默认生成的copy函数就是用现在的数据字段生成了一个新的对象。
+```
+fun copy(id: Int = this.id,name: String = this.name) = User(id,name)
+```
+
+如果只想改变其中的某些字段，就可以在调用copy的时候采用命名参数的方法进行调用
+
+```
+fun main(args: Array<String>) {
+    var user: User = User(123, "liuliqianxiao")
+    var other: User = user.copy(name = "mdzz")//只想改变名字
+}
+```
 
 
 
