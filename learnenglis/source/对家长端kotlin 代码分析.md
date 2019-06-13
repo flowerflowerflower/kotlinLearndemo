@@ -27,3 +27,23 @@ private val _wechatId
         get() = arguments?.getString(WECHAT_ID) ?: ""  //核心是get() //仅仅在左边的表达式结果为空时才会计算?:后面的表达式
 ```
 
+在kotlin 中使用
+
+![kotlin中width的使用](https://github.com/flowerflowerflower/kotlinLearndemo/blob/master/learnenglis/source/image/1560409327.jpg?raw=true)
+
+----------
+
+
+关于 inline 和 <reified VM : ViewModel >  
+
+//1560410381
+
+![kotlin中width的使用](https://github.com/flowerflowerflower/kotlinLearndemo/blob/master/learnenglis/source/image/1560410381.jpg?raw=true)
+```
+
+```
+
+
+
+
+
