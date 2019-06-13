@@ -34,14 +34,22 @@ private val _wechatId
 ----------
 
 
-关于 inline 和 <reified VM : ViewModel >  
+关于 inline 和 reifeid
 
-//1560410381
+
 
 ![kotlin中width的使用](https://github.com/flowerflowerflower/kotlinLearndemo/blob/master/learnenglis/source/image/1560410381.jpg?raw=true)
-```
 
-```
+----------
+什么是inline  编译的时候 直接替换插入方法类的代码
+
+什么是 reifeid  具体化
+
+
+>具体化泛型传入的类型,知道该泛型类型所对应真正的类型.
+
+
+
 
 
 
