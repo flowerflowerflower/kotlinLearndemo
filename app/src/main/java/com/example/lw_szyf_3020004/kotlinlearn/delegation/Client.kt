@@ -15,6 +15,10 @@ class Derived(b:Base):Base by b
 fun main() {
     val b =BaseImpl(10)
     Derived(b).print()
+    val result = with(100){
+        this+20
+    }
+    println(result)
 }
 
 
