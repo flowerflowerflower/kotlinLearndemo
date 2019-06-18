@@ -94,6 +94,47 @@ fun main(args: Array<String>) {
 ```
 
 
+## kotlin 泛型
+
+```
+public interface DataExtractor<S, T> {
+
+    S getDataFromHttpResult(Result<T> rResult);
+
+}
+
+public interface Result<T> {
+
+    /**
+     * 实际返回类型
+     */
+    T getData();
+
+    /**
+     * 响应码
+     */
+    int getCode();
+
+    /**
+     * 相应消息
+     */
+    String getMessage();
+
+    /**
+     * 请求是否成功
+     */
+    boolean isSuccess();
+
+}
+```
+
+
+
+
+
+
+
+
 
 
 
