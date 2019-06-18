@@ -1,3 +1,4 @@
+
 package com.example.lw_szyf_3020004.kotlinlearn.construct
 
 class 妹子(override var 性格:String,override var 长相:String,override var 声音:String):人(性格, 长相, 声音)
