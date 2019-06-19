@@ -129,6 +129,77 @@ public interface Result<T> {
 ```
 
 
+## kotlin中使用静态变量和静态方法
+```
+class Constanct{
+    companion object{
+
+        @JvmField
+        const val BASE_URL = "http://xxxx.xxx.xxx/"
+
+        fun getVideoFactor(){
+   
+        
+        }
+    }
+
+}
+```
+
+
+## kotlin 对类型进行扩展
+
+```
+给类扩展方法
+internal fun Int.appRuleTypeTextDesc(): String {
+    return when (this) {
+        APP_RULE_TYPE_LIMITED -> ResourceUtils.getString(com.app.base.R.string.limited_usable)
+        APP_RULE_TYPE_FREE -> ResourceUtils.getString(com.app.base.R.string.free_usable)
+        APP_RULE_TYPE_DISABLE -> ResourceUtils.getString(com.app.base.R.string.disabled)
+        else -> throw IllegalArgumentException("不支持的这种类型")
+    }
+}
+```
+
+## kotlin  when
+```
+  when {
+            item.rule_type.isDisabled() -> {
+                viewHolder.tvAppsDialogItemCategory.visible()
+                viewHolder.tvAppsDialogItemCategory.setText(R.string.disabled)
+                viewHolder.tvAppsDialogItemCategory.setTextColor(ContextCompat.getColor(mContext, R.color.red_level2))
+                viewHolder.tvAppsDialogItemCategory.background = disableIndicatorDrawable
+            }
+            item.rule_type.isFreeUsable() -> {
+                viewHolder.tvAppsDialogItemCategory.visible()
+                viewHolder.tvAppsDialogItemCategory.setText(R.string.free_usable)
+                viewHolder.tvAppsDialogItemCategory.setTextColor(ContextCompat.getColor(mContext, R.color.green_main))
+                viewHolder.tvAppsDialogItemCategory.background = freeIndicatorDrawable
+            }
+            item.rule_type.isLimitedUsable() -> {
+                viewHolder.tvAppsDialogItemCategory.visible()
+                viewHolder.tvAppsDialogItemCategory.setText(R.string.limited_usable)
+                viewHolder.tvAppsDialogItemCategory.setTextColor(ContextCompat.getColor(mContext, R.color.gray_level2))
+                viewHolder.tvAppsDialogItemCategory.background = mLimitedIndicatorDrawable
+            }
+            else -> {
+                viewHolder.tvAppsDialogItemCategory.background = null
+                viewHolder.tvAppsDialogItemCategory.invisible()
+            }
+        }
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
