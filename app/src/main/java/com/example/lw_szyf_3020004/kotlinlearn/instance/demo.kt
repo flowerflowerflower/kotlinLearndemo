@@ -42,6 +42,18 @@ class SingletoDemo2 private constructor() {
     }
 }
 
+/**
+ * lazy mode with double check
+ */
 
+
+//kotlin实现
+class SingletonDemo private constructor() {
+    companion object {
+        val instance: SingletonDemo by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+            SingletonDemo()
+        }
+    }
+}
 
 
