@@ -73,7 +73,7 @@ public class AudioPlayer : MediaPlayer {
             System.out.println("Playing mp3 file. Name: " + fileName);
         } else if (audioType.equals("vlc", true) || audioType.equals("mp4", true)) {
             mediaAdapter = MediaAdapter(audioType)
-            mediaAdapter.play(audioType,fileName)
+            mediaAdapter.play(audioType, fileName)
         } else {
             System.out.println("Invalid media. " +
                     audioType + " format not supported");
